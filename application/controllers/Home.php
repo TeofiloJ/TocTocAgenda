@@ -22,16 +22,19 @@ class Home extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-
-		$this->load->helper('url');
-		$this->load->helper('form');
 	}
 
 	public function index()
 	{
 
-		$this->load->view('default/header');
-		//$this->load->view('body_home');
-		$this->load->view('default/footer');
+        $this->load->view('header');
+        if(isset($_SESSION['oui'])){
+            $this->load->view('menus/logged_menu');
+        }else{
+            $this->load->view('menus/menu');
+        }
+		
+		$this->load->view('pages/home');
+		$this->load->view('footer');
 	}
 }
