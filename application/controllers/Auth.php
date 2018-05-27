@@ -22,7 +22,7 @@ class Auth extends CI_Controller {
         }
 
         $this->load->view('header');
-        
+        $this->load->view('menus/menu');
         $this->load->view('auth/register');
         $this->load->view('footer');
 
@@ -42,7 +42,7 @@ class Auth extends CI_Controller {
 
             $user = $query->row();
 
-            if($user->email){
+            if(isset($user->mail)){
                 $this->session->set_flashdata("success","vous vous êtes connecté.");                
 
                 $_SESSION["user_logged"] = TRUE;
@@ -61,9 +61,17 @@ class Auth extends CI_Controller {
 
         }
 
-        $this->load->view('header');        
+        $this->load->view('header');
+        $this->load->view('menus/menu');        
         $this->load->view('auth/login');
         $this->load->view('footer');
+    }
+
+    public function logout(){
+
+        unset($_SESSION);
+        session_destroy();
+        redirect("home");
     }
 
 }

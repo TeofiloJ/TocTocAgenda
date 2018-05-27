@@ -1,15 +1,14 @@
-    <h1>S'enregistrer</h1>
     <form action="" method="POST" class="form-horizontal">
 <fieldset>
 
 <?php if (isset($_SESSION['success'])){ ?>
-    <div class="allert alert-success"> <?php echo $_SESSION['success']; ?></div>
+    <div class="alert alert-success"> <?php echo $_SESSION['success']; ?></div>
 <?php
 }?>
 
-<!-- Form Name 
-<legend>Form Name</legend>
--->
+<!-- Form Name -->
+<legend>S'enregistrer</legend>
+
 <!-- Text input-->
 <div class="form-group">
     <label class="col-md-4 control-label" for="prenom">Prénom</label>  

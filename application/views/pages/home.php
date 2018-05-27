@@ -1,5 +1,5 @@
 <?php if (isset($_SESSION['success'])){ ?>
-    <div class="allert alert-success"> <?php echo $_SESSION['success']; ?></div>
+    <div class="alert alert-success"> <?php echo $_SESSION['success']; ?></div>
 <?php
 }?>
 
