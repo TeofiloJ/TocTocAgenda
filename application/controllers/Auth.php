@@ -40,11 +40,11 @@ class Auth extends MY_Controller
 	{
 		if( $this->require_role('admin') )
 		{
-			echo $this->load->view('examples/page_header', '', TRUE);
+			echo $this->load->view('default/user_header', '', TRUE);
 
 			echo '<p>You are logged in!</p>';
 
-			echo $this->load->view('examples/page_footer', '', TRUE);
+			echo $this->load->view('default/footer', '', TRUE);
 		}
 	}
 	
@@ -59,11 +59,11 @@ class Auth extends MY_Controller
 	{
 		$this->is_logged_in();
 		
-		echo $this->load->view('examples/page_header', '', TRUE);
+		echo $this->load->view('default/user_header', '', TRUE);
 
 		echo '<p>Welcome Home</p>';
 
-		echo $this->load->view('examples/page_footer', '', TRUE);
+		echo $this->load->view('default/footer', '', TRUE);
 	}
 	
 	// -----------------------------------------------------------------------
@@ -96,14 +96,14 @@ class Auth extends MY_Controller
 			// Form helper needed
 			$this->load->helper('form');
 
-			$page_content .= $this->load->view('examples/login_form', '', TRUE);
+			$page_content .= $this->load->view('auth/login_form', '', TRUE);
 		}
 
-		echo $this->load->view('examples/page_header', '', TRUE);
+		echo $this->load->view('default/header', '', TRUE);
 
 		echo $page_content;
 
-		echo $this->load->view('examples/page_footer', '', TRUE);
+		echo $this->load->view('default/footer', '', TRUE);
 	}
 	
 	// -----------------------------------------------------------------------
@@ -119,7 +119,7 @@ class Auth extends MY_Controller
 	{
 		$this->is_logged_in();
 
-		echo $this->load->view('examples/page_header', '', TRUE);
+		echo $this->load->view('default/header', '', TRUE);
 
 		echo '<p>';
 		if( ! empty( $this->auth_role ) )
@@ -168,7 +168,7 @@ class Auth extends MY_Controller
 
 		echo '</p>';
 
-		echo $this->load->view('examples/page_footer', '', TRUE);
+		echo $this->load->view('default/footer', '', TRUE);
 	}
 	
 	// -----------------------------------------------------------------------
@@ -200,7 +200,7 @@ class Auth extends MY_Controller
 
 		$this->is_logged_in();
 
-		echo $this->load->view('examples/page_header', '', TRUE);
+		echo $this->load->view('default/header', '', TRUE);
 
 		// Load resources
 		$this->load->helper('auth');
@@ -274,7 +274,7 @@ class Auth extends MY_Controller
 			echo '<h1>User Creation Error(s)</h1>' . validation_errors();
 		}
 
-		echo $this->load->view('examples/page_footer', '', TRUE);
+		echo $this->load->view('default/footer', '', TRUE);
 	}
 	
 	// -----------------------------------------------------------------------
@@ -288,7 +288,7 @@ class Auth extends MY_Controller
 	public function login()
 	{
 		// Method should not be directly accessible
-		if( $this->uri->uri_string() == 'examples/login')
+		if( $this->uri->uri_string() == 'auth/login')
 			show_404();
 
 		if( strtolower( $_SERVER['REQUEST_METHOD'] ) == 'post' )
@@ -296,9 +296,9 @@ class Auth extends MY_Controller
 
 		$this->setup_login_form();
 
-		$html = $this->load->view('examples/page_header', '', TRUE);
-		$html .= $this->load->view('examples/login_form', '', TRUE);
-		$html .= $this->load->view('examples/page_footer', '', TRUE);
+		$html = $this->load->view('default/user_header', '', TRUE);
+		$html .= $this->load->view('auth/login_form', '', TRUE);
+		$html .= $this->load->view('default/footer', '', TRUE);
 
 		echo $html;
 	}
@@ -375,7 +375,7 @@ class Auth extends MY_Controller
 						$link_protocol = USE_SSL ? 'https' : NULL;
 
 						// Set URI of link
-						$link_uri = 'examples/recovery_verification/' . $user_data->user_id . '/' . $recovery_code;
+						$link_uri = 'auth/recovery_verification/' . $user_data->user_id . '/' . $recovery_code;
 
 						$view_data['special_link'] = anchor( 
 							site_url( $link_uri, $link_protocol ), 
@@ -398,11 +398,11 @@ class Auth extends MY_Controller
 			}
 		}
 
-		echo $this->load->view('examples/page_header', '', TRUE);
+		echo $this->load->view('default/header', '', TRUE);
 
-		echo $this->load->view('examples/recover_form', ( isset( $view_data ) ) ? $view_data : '', TRUE );
+		echo $this->load->view('auth/recover_form', ( isset( $view_data ) ) ? $view_data : '', TRUE );
 
-		echo $this->load->view('examples/page_footer', '', TRUE);
+		echo $this->load->view('default/footer', '', TRUE);
 	}
 
 	// --------------------------------------------------------------
@@ -482,11 +482,11 @@ class Auth extends MY_Controller
 			}
 		}
 
-		echo $this->load->view('examples/page_header', '', TRUE);
+		echo $this->load->view('default/header', '', TRUE);
 
 		echo $this->load->view( 'examples/choose_password_form', $view_data, TRUE );
 
-		echo $this->load->view('examples/page_footer', '', TRUE);
+		echo $this->load->view('default/footer', '', TRUE);
 	}
 
 	// --------------------------------------------------------------
@@ -523,7 +523,7 @@ class Auth extends MY_Controller
 					$.ajax({
 						type: 'post',
 						cache: false,
-						url: '" . site_url('examples/ajax_attempt_login', $link_protocol ) . "',
+						url: '" . site_url('auth/ajax_attempt_login', $link_protocol ) . "',
 						data: {
 							'login_string': $('#login_string').val(),
 							'login_pass': $('#login_pass').val(),
@@ -535,7 +535,7 @@ class Auth extends MY_Controller
 							console.log(response);
 							if(response.status == 1){
 								$('form').replaceWith('<p>You are now logged in.</p>');
-								$('#login-link').attr('href','" . site_url('examples/logout', $link_protocol ) . "').text('Logout');
+								$('#login-link').attr('href','" . site_url('auth/logout', $link_protocol ) . "').text('Logout');
 								$('#ajax-login-link').parent().hide();
 							}else if(response.status == 0 && response.on_hold){
 								$('form').hide();
@@ -551,9 +551,9 @@ class Auth extends MY_Controller
 			});
 		</script>";
 
-		$html = $this->load->view('examples/page_header', $data, TRUE);
-		$html .= $this->load->view('examples/ajax_login_form', $data, TRUE);
-		$html .= $this->load->view('examples/page_footer', '', TRUE);
+		$html = $this->load->view('default/header', $data, TRUE);
+		$html .= $this->load->view('auth/ajax_login_form', $data, TRUE);
+		$html .= $this->load->view('default/footer', '', TRUE);
 
 		echo $html;
 	}
@@ -568,7 +568,7 @@ class Auth extends MY_Controller
 		if( $this->input->is_ajax_request() )
 		{
 			// Allow this page to be an accepted login page
-			$this->config->set_item('allowed_pages_for_login', ['examples/ajax_attempt_login'] );
+			$this->config->set_item('allowed_pages_for_login', ['auth/ajax_attempt_login'] );
 
 			// Make sure we aren't redirecting after a successful login
 			$this->authentication->redirect_after_login = FALSE;
@@ -662,7 +662,7 @@ class Auth extends MY_Controller
 		}
 		else
 		{
-			echo 'Example requires that you set a username or email address.';
+			echo 'Auth requires that you set a username or email address.';
 		}
 	}
 	

@@ -26,7 +26,7 @@ if( ! isset( $on_hold_message ) )
 
 	<?php
 
-	echo form_open( 'examples/ajax_attempt_login', ['class' => 'std-form'] );
+	echo form_open( 'auth/ajax_attempt_login', ['class' => 'std-form'] );
 
 	?>
 
@@ -86,11 +86,11 @@ echo '
 			Your access to login and account recovery has been blocked for ' . ( (int) config_item('seconds_on_hold') / 60 ) . ' minutes.
 		</p>
 		<p>
-			Please use the <a href="/examples/recover">Account Recovery</a> after ' . ( (int) config_item('seconds_on_hold') / 60 ) . ' minutes has passed,<br />
+			Please use the <a href="/auth/recover">Account Recovery</a> after ' . ( (int) config_item('seconds_on_hold') / 60 ) . ' minutes has passed,<br />
 			or contact us if you require assistance gaining access to your account.
 		</p>
 	</div>
 ';
 
 /* End of file login_form.php */
-/* Location: /community_auth/views/examples/ajax_login_form.php */ 
+/* Location: /community_auth/views/auth/ajax_login_form.php */ 

@@ -80,7 +80,7 @@ if( ! isset( $on_hold_message ) )
 			<?php
 				$link_protocol = USE_SSL ? 'https' : NULL;
 			?>
-			<a href="<?php echo site_url('examples/recover', $link_protocol); ?>">
+			<a href="<?php echo site_url('auth/recover', $link_protocol); ?>">
 				Can't access your account?
 			</a>
 		</p>
@@ -110,7 +110,7 @@ if( ! isset( $on_hold_message ) )
 					Your access to login and account recovery has been blocked for ' . ( (int) config_item('seconds_on_hold') / 60 ) . ' minutes.
 				</p>
 				<p>
-					Please use the <a href="/examples/recover">Account Recovery</a> after ' . ( (int) config_item('seconds_on_hold') / 60 ) . ' minutes has passed,<br />
+					Please use the <a href="/auth/recover">Account Recovery</a> after ' . ( (int) config_item('seconds_on_hold') / 60 ) . ' minutes has passed,<br />
 					or contact us if you require assistance gaining access to your account.
 				</p>
 			</div>
@@ -118,4 +118,4 @@ if( ! isset( $on_hold_message ) )
 	}
 
 /* End of file login_form.php */
-/* Location: /community_auth/views/examples/login_form.php */ 
+/* Location: /community_auth/views/auth/login_form.php */ 

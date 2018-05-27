@@ -67,7 +67,7 @@ if( isset( $recovery_error ) )
 				Account recovery links expire after 
 				' . ( (int) config_item('recovery_code_expiration') / ( 60 * 60 ) ) . ' 
 				hours.<br />You will need to use the 
-				<a href="/examples/recover">Account Recovery</a> form 
+				<a href="/auth/recover">Account Recovery</a> form 
 				to send yourself a new link.
 			</p>
 		</div>
@@ -177,4 +177,4 @@ if( $showform == 1 )
 	}
 }
 /* End of file choose_password_form.php */
-/* Location: /community_auth/views/examples/choose_password_form.php */
+/* Location: /community_auth/views/auth/choose_password_form.php */

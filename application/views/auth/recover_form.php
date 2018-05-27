@@ -61,7 +61,7 @@ else if( isset( $confirmation ) )
 			<p>
 				<b>Please note</b>: The account recovery link would normally be placed in an email, 
 				and you would not see it here on the screen. This is to limit the code in the 
-				Examples controller, and keep your focus on learning Community Auth, but give you 
+				auth controller, and keep your focus on learning Community Auth, but give you 
 				an idea of how to implement account recovery. <b>When you do end up writing code to send 
 				the recovery link to an email address, you will want to delete it from this view, 
 				delete these instructions, and instead have a simple message similar to the following</b>:
@@ -148,4 +148,4 @@ if( isset( $show_form ) )
 	<?php
 }
 /* End of file recover_form.php */
-/* Location: /community_auth/views/examples/recover_form.php */
+/* Location: /community_auth/views/auth/recover_form.php */
