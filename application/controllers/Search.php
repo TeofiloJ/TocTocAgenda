@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Users extends CI_Controller {
+class Search extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -34,7 +34,11 @@ class Users extends CI_Controller {
 	{
 
         $this->load->view('header');
-        $this->load->view('menus/logged_menu');
+        if(isset($_SESSION['oui'])){
+            $this->load->view('menus/logged_menu');
+        }else{
+            $this->load->view('menus/menu');
+        }
 		
 		$this->load->view('profile/profile');
 		$this->load->view('footer');

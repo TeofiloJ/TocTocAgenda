@@ -3,5 +3,5 @@
 <?php
 }?>
 
-<h1> accueil </h1>
+<h1> Profil </h1>
 
