@@ -1,7 +1,7 @@
 <div class="menu">
   <a href="<?php echo base_url()?>home" class="logo">TocTocAgenda</a>
   <div class="menu-center">
-    <a href="#about">Rechercher</a>
+    <a href="<?php echo base_url()?>annonces/search">Rechercher</a>
     <a href="<?php echo base_url()?>annonces/create">Vendre et louer</a>
     
   </div>

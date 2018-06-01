@@ -1,14 +1,14 @@
-<form class="form-horizontal">
+<form action="" method="POST" class="form-horizontal">
 <fieldset>
 
 <!-- Form Name -->
-<legend>Form Name</legend>
+<legend>Votre annonce</legend>
 
 <!-- Select Basic -->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="selectbasic">Type d'annonce</label>
+  <label class="col-md-4 control-label" for="typeAnnonce">Type d'annonce</label>
   <div class="col-md-2">
-    <select id="selectbasic" name="selectbasic" class="form-control">
+    <select id="typeAnnonce" name="typeAnnonce" class="form-control">
       <option value="Location">Location</option>
       <option value="Vente">Vente</option>
     </select>
@@ -68,7 +68,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="description">description</label>
   <div class="col-md-4">                     
-    <textarea class="form-control" id="description" name="description">A LOUER - Appartement de 4 pièces situé dans une résidence à deux pas des commerces et des transports en communs. Cet appartement est composé: d'une entrée, un séjour, 3 chambres avec placards, une cuisine séparée et aménagée, une salle de bains, WC séparés. Vous pourrez aussi bénéficier d'un Balcon. Le Chauffage et l'eau chaude sont inclus dans les charges. Découvrez notre visite virtuelle ! DPE: C.</textarea>
+    <textarea class="form-control" id="description" name="description"></textarea>
   </div>
 </div>
 
@@ -125,9 +125,9 @@
 
 <!-- Button -->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="creer"></label>
+  <label class="col-md-4 control-label" for="velider"></label>
   <div class="col-md-4">
-    <button id="creer" name="creer" class="btn btn-primary">Créer</button>
+    <button id="valider" name="valider" class="btn btn-success">Valider</button>
   </div>
 </div>
 
