@@ -5,6 +5,6 @@
     <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   </body>
 <footer>
-    <p> copyright @TocTocAgenda 2018 </p>
+    <!--<p> copyright @TocTocAgenda 2018 </p> -->
 </footer>
 </html>

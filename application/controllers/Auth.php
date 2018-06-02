@@ -44,7 +44,7 @@ class Auth extends CI_Controller {
 
             if(isset($user->mail)){
                 $this->session->set_flashdata("success","vous vous êtes connecté.");                
-
+                $_SESSION["idUser"] = $user->id_user;;
                 $_SESSION["user_logged"] = TRUE;
                 $_SESSION["prenom"] = $user->prenom;
                 $_SESSION["nom"] = $user->nom;

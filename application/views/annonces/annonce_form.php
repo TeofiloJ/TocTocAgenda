@@ -125,9 +125,9 @@
 
 <!-- Button -->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="velider"></label>
+  <label class="col-md-4 control-label" for="validate"></label>
   <div class="col-md-4">
-    <button id="valider" name="valider" class="btn btn-success">Valider</button>
+    <button id="validate" name="validate" class="btn btn-success">Valider</button>
   </div>
 </div>
 

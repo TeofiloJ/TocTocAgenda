@@ -12,7 +12,7 @@ class Annonces extends CI_Controller {
     
     public function search(){
         $this->load->view('header');
-        $this->load->view('menus/logged_menu');
+        $this->load->view('menus/menu');
 		
 		$this->load->view('annonces/annonce_search');
 		$this->load->view('footer');
@@ -45,6 +45,7 @@ class Annonces extends CI_Controller {
 
         if(isset($_POST['validate'])){
             $data = array(
+                'idUser'=>$_SESSION["idUser"],
                 'typeAnnonce'=>$_POST['typeAnnonce'],
                 'typeDeBien'=>$_POST['typeDeBien'],
                 'nom'=>$_POST['nom'],
@@ -60,7 +61,7 @@ class Annonces extends CI_Controller {
             $this->db->insert('annonce',$data);
 
             $this->session->set_flashdata("success","Votre annonce à bien été créée.");
-            redirect("annonce/display",$data);
+            redirect("annonces/display",$data);
         }
 
         $this->load->view('header');

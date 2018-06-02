@@ -1,3 +1,17 @@
+<nav>
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item">
+			<a href="<?php echo base_url()?>">Home</a>
+		</li>
+		<li class="breadcrumb-item">
+			<a href="<?php echo base_url()?>auth">Authentification</a>
+		</li>
+		<li class="breadcrumb-item active">
+			Login
+		</li>
+	</ol>
+</nav>
+    
     <form action="" method="POST" class="form-horizontal">
 <fieldset>
 
@@ -10,8 +24,6 @@
 <?php
 }?>
 
-<!-- Form Name -->
-<legend>Se connecter</legend>
 
     <!-- Text input-->
     <div class="form-group">
