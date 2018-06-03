@@ -7,27 +7,9 @@ class Search extends CI_Controller {
 	{
         parent::__construct();
         
-
-                if(!isset($_SESSION["user_logged"])){
-                    $this->session->set_flashdata("error","Erreur : vous devez être connecté pour voir cette page.");
-                    redirect("auth/login");
-                }
 	}
 
-	public function index()
-	{
-
-        $this->load->view('header');
-        if(isset($_SESSION['oui'])){
-            $this->load->view('menus/logged_menu');
-        }else{
-            $this->load->view('menus/menu');
-        }
-		
-		$this->load->view('ajaxsearch');
-		$this->load->view('footer');
-    }
-    
+ 
     
     function fetch()
     {

@@ -20,8 +20,8 @@ class Annonces extends CI_Controller {
 		
 		$this->load->view('annonces/annonce_search');
     }
-
-	public function index()
+    
+    public function index()
 	{
 
         $this->load->view('header');
@@ -30,7 +30,7 @@ class Annonces extends CI_Controller {
 		$this->load->view('annonces/annonce_form');
     }
 
-    public function display(){
+    public function display($id){
         $this->load->view('header');
         $this->load->view('menus/logged_menu');
 		
