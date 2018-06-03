@@ -12,10 +12,13 @@ class Annonces extends CI_Controller {
     
     public function search(){
         $this->load->view('header');
-        $this->load->view('menus/menu');
+        if(isset($_SESSION['user_logged'])){
+            $this->load->view('menus/logged_menu');
+       	}else{
+            $this->load->view('menus/menu');
+       	}
 		
 		$this->load->view('annonces/annonce_search');
-		$this->load->view('footer');
     }
 
 	public function index()
@@ -25,15 +28,13 @@ class Annonces extends CI_Controller {
         $this->load->view('menus/logged_menu');
 		
 		$this->load->view('annonces/annonce_form');
-		$this->load->view('footer');
     }
 
     public function display(){
         $this->load->view('header');
         $this->load->view('menus/logged_menu');
 		
-		$this->load->view('annonces/annonce_form');
-		$this->load->view('footer');
+		$this->load->view('annonces/annonce_display');
     }
     
     public function create()

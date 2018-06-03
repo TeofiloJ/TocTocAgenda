@@ -1,23 +1,21 @@
-
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-12">
-			<nav>
+<nav>
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item">
 						<a href="#">Home</a>
 					</li>
 					<li class="breadcrumb-item">
-						<a href="#">Library</a>
+						<a href="#">Annonces</a>
 					</li>
 					<li class="breadcrumb-item active">
-						Data
+						Détail de l'annonce
 					</li>
 				</ol>
 			</nav>
-			<h3>
-				h3. Lorem ipsum dolor sit amet.
-			</h3>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+
 			<div class="row">
 				<div class="col-md-7">
 					<div class="carousel slide" id="carousel-10860">
@@ -96,11 +94,43 @@
 					</dl>
 				</div>
 				<div class="col-md-5">
+
+					<link rel="stylesheet" href="<?php echo base_url() ?>assets/calendar/fullcalendar.min.css" />
+					<script src="<?php echo base_url() ?>assets/calendar/lib/moment.min.js"></script>
+					<script src="<?php echo base_url() ?>assets/calendar/fullcalendar.min.js"></script>
+					<script src="<?php echo base_url() ?>assets/calendar/gcal.js"></script>
+
+					<div id="calendar">
+
+					</div>
+
+					<script type="text/javascript">
+							$(document).ready(function() {
+								$('#calendar').fullCalendar({
+									eventSources: [
+										{
+											color: '#18b9e6',   
+											textColor: '#000000',
+											events: [
+												{
+								title: 'Event 1',
+								start: '2018-06-01'
+							},
+							{
+								title: 'Event 2',
+								start: '2018-06-07'
+							}
+											]
+										}
+									]
+								});
+							});
+					</script>
 				</div>
 			</div>
-			<h3>
-				h3. Lorem ipsum dolor sit amet.
-			</h3>
+			<h4>
+				Annonces à proximités
+			</h4>
 			<div class="row">
 				<div class="col-md-4">
 					<div class="card">

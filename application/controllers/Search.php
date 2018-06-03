@@ -24,7 +24,57 @@ class Search extends CI_Controller {
             $this->load->view('menus/menu');
         }
 		
-		$this->load->view('profile/profile');
+		$this->load->view('ajaxsearch');
 		$this->load->view('footer');
-	}
+    }
+    
+    
+    function fetch()
+    {
+     $output = '';
+     $query = '';
+     $this->load->model('ajaxsearch_model');
+     if($this->input->post('query'))
+     {
+      $query = $this->input->post('query');
+     }
+     $data = $this->ajaxsearch_model->fetch_data($query);
+     $output .= '
+     <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+         <tr>
+          <th>Aperçu</th>
+          <th>Type de bien</th>
+          <th>Prix</th>
+          <th>Surface</th>
+          <th>Nom</th>
+          <th>Détail</th>
+         </tr>
+     ';
+     if($data->num_rows() > 0)
+     {
+      foreach($data->result() as $row)
+      {
+       $output .= '
+         <tr>
+         <th><img src="https://img.chooseacottage.co.uk/Property/132/400/1329687.jpg"></img></th>
+          <td>'.$row->typeDeBien.'</td>
+          <td>'.$row->prix.'</td>
+          <td>'.$row->surface.'</td>
+          <td>'.$row->nom.'</td>
+          <th><a href="display/'.$row->idAnnonce.'">Détails</a></th>
+         </tr>
+       ';
+      }
+     }
+     else
+     {
+      $output .= '<tr>
+          <td colspan="5">No Data Found</td>
+         </tr>';
+     }
+     $output .= '</table>';
+     echo $output;
+    }
+    
 }

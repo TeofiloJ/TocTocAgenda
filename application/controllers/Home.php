@@ -20,6 +20,30 @@ class Home extends CI_Controller {
        	}
 		
 		$this->load->view('pages/home');
-		$this->load->view('footer');
 	}
+
+	public function contact()
+	{
+        $this->load->view('header');
+        if(isset($_SESSION['user_logged'])){
+            $this->load->view('menus/logged_menu');
+       	}else{
+            $this->load->view('menus/menu');
+       	}
+		
+		$this->load->view('pages/contact');
+	}
+
+	public function about()
+	{
+        $this->load->view('header');
+        if(isset($_SESSION['user_logged'])){
+            $this->load->view('menus/logged_menu');
+       	}else{
+            $this->load->view('menus/menu');
+       	}
+		
+		$this->load->view('pages/about');
+	}
+
 }
