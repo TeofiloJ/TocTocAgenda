@@ -33,8 +33,14 @@ class Annonces extends CI_Controller {
     public function display($id){
         $this->load->view('header');
         $this->load->view('menus/logged_menu');
-		
-		$this->load->view('annonces/annonce_display');
+        
+        $this->db->select("*");
+        $this->db->from("annonce");
+        $this->db->where("idAnnonce = $id");
+        $annonce = $this->db->get()->result();
+        $data = array ('annonce' => $annonce);
+
+		$this->load->view('annonces/annonce_display', $data);
     }
     
     public function create()

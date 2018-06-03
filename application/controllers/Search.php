@@ -39,7 +39,7 @@ class Search extends CI_Controller {
       {
        $output .= '
          <tr>
-         <th><img src="https://img.chooseacottage.co.uk/Property/132/400/1329687.jpg"></img></th>
+         <th><img src="'.base_url().'assets/img/apercu.jpg"."></img></th>
           <td>'.$row->typeDeBien.'</td>
           <td>'.$row->prix.'</td>
           <td>'.$row->surface.'</td>
