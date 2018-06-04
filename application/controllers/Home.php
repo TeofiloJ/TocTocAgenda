@@ -9,6 +9,11 @@ class Home extends CI_Controller {
 		parent::__construct();
 	}
 
+	public function comingSoon(){
+		$this->load->view('pages/comingsoon');
+	}
+	
+
 	public function index()
 	{
 

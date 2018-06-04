@@ -4,6 +4,18 @@
     <div class="menu-center">
       <a class="lien" href="<?php echo base_url()?>annonces/search">Rechercher</a>
       <a class="lien" href="<?php echo base_url()?>annonces/create">Déposer une annonce</a>
+      <ul class="nav navbar-nav">
+                                    <li class="dropdown"><a class="lien" href="#" class="dropdown-toggle" data-toggle="dropdown">Gestion
+                                        <b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                            <a class="lien" href="<?php echo base_url()?>annonces/adsList">Mes annonces</a>
+                                            
+                                            </li>
+                                            <li><a class="lien" href="<?php echo base_url()?>annonces/create">Mes rendez-vous</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
       
     </div>
     <div class="menu-right">
