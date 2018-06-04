@@ -7,7 +7,7 @@
   </div>
 
   <div class="menu-right">
-    <a class="lien" class="active" href="<?php echo base_url()?>auth/login">Login</a>
+    <a class="lien active" href="<?php echo base_url()?>auth/login">Login</a>
     <a class="lien" href="<?php echo base_url()?>home/contact">Contact</a>
     <a class="lien" href="<?php echo base_url()?>home/about">A propos</a>
   </div>

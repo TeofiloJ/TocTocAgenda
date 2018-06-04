@@ -1,7 +1,8 @@
 /* Style the header with a grey background and some padding */
 .menu {
   background-color: rgba(0, 0, 0, 0.87);
-  padding-bottom: 50px;
+  padding-top: 10px;
+  padding-bottom: 60px;
 }
 
   /* Style the header links */
@@ -13,8 +14,8 @@
     padding: 12px;
     font-size: 18px;
     line-height: 25px;
-  }
-  
+    border-radius: 4px; 
+  } 
 
   
   /* Change the background color on mouse-over */
