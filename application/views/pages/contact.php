@@ -28,7 +28,7 @@
 				<div class="" id="contact1">                        
 					<div class="row">
 						<div class="col-sm-4">
-							<h3><i class="fa fa-map-marker"></i> Address</h3>
+							<h3><i class="fa fa-map-marker"></i> Addresse</h3>
 							<p>20 Boulevard Général de Gaulle
 								<br>Nantes 
 								<br>
@@ -37,7 +37,7 @@
 						</div>
 						<!-- /.col-sm-4 -->
 						<div class="col-sm-4">
-							<h3><i class="fa fa-phone"></i> Call center</h3>
+							<h3><i class="fa fa-phone"></i> Télephone</h3>
 							<p><strong>+33 01 02 03 04 05</strong></p>
 						</div>
 						<!-- /.col-sm-4 -->
@@ -104,25 +104,22 @@
 
 <script src="assets/js/modernizr-2.6.2.min.js"></script>
 
-<script src="assets/js/jquery-1.10.2.min.js"></script> 
-<script src="bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/js/bootstrap-select.min.js"></script>
-<script src="assets/js/bootstrap-hover-dropdown.js"></script>
+<script src="<?php echo base_url()?>assets/js/jquery-1.10.2.min.js"></script> 
+<script src="<?php echo base_url()?>bootstrap/js/bootstrap.min.js"></script>
+<script src="<?php echo base_url()?>assets/js/bootstrap-select.min.js"></script>
+<script src="<?php echo base_url()?>assets/js/bootstrap-hover-dropdown.js"></script>
 
-<script src="assets/js/easypiechart.min.js"></script>
-<script src="assets/js/jquery.easypiechart.min.js"></script>
+<script src="<?php echo base_url()?>assets/js/easypiechart.min.js"></script>
+<script src="<?php echo base_url()?>assets/js/jquery.easypiechart.min.js"></script>
 
-<script src="assets/js/owl.carousel.min.js"></script>
-<script src="assets/js/wow.js"></script>
+<script src="<?php echo base_url()?>assets/js/owl.carousel.min.js"></script>
+<script src="<?php echo base_url()?>assets/js/wow.js"></script>
 
-<script src="assets/js/icheck.min.js"></script>
-<script src="assets/js/price-range.js"></script>
+<script src="<?php echo base_url()?>assets/js/icheck.min.js"></script>
+<script src="<?php echo base_url()?>assets/js/price-range.js"></script>
 
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
-<script src="assets/js/gmaps.js"></script>        
-<script src="assets/js/gmaps.init.js"></script>
+<script src="<?php echo base_url()?>assets/js/gmaps.js"></script>        
+<script src="<?php echo base_url()?>assets/js/gmaps.init.js"></script>
 
-<script src="assets/js/main.js"></script>
-
-</body>
-</html>
+<script src="<?php echo base_url()?>assets/js/main.js"></script>
