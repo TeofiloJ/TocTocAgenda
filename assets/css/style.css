@@ -1,20 +1,18 @@
 /* Style the header with a grey background and some padding */
 .menu {
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.87);
-    padding: 10px 10px;
-  }
-  
+  background-color: rgba(0, 0, 0, 0.87);
+  padding-bottom: 50px;
+}
+
   /* Style the header links */
-  .menu a {
+  .lien {
     float: left;
     color: white;
     text-align: center;
-    padding: 12px;
     text-decoration: none;
+    padding: 12px;
     font-size: 18px;
     line-height: 25px;
-    border-radius: 4px;
   }
   
 
@@ -36,11 +34,6 @@
   /* Float the link section to the right */
   .menu-right {
     float: right;
-  }
-
-  .menu-center {
-    margin-left: auto;
-    margin-right: auto;
   }
   
   /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */

@@ -7,7 +7,7 @@
 						About
 					</li>
 				</ol>
-			</nav>
+</nav>
 
 
 <div class="container">
