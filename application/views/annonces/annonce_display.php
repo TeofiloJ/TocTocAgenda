@@ -10,7 +10,7 @@
 						Détail de l'annonce
 					</li>
 				</ol>
-			</nav>
+</nav>
 
 <div class="container-fluid">
 	<div class="row">

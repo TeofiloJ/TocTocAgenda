@@ -1,8 +1,20 @@
 <form action="" method="POST" class="form-horizontal">
 <fieldset>
 
-<!-- Form Name -->
-<legend>Votre annonce</legend>
+
+<nav>
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item">
+						<a href="#">Home</a>
+					</li>
+					<li class="breadcrumb-item">
+						<a href="#">Annonces</a>
+					</li>
+					<li class="breadcrumb-item active">
+						Créer une annonce
+					</li>
+				</ol>
+</nav>
 
 <!-- Select Basic -->
 <div class="form-group">

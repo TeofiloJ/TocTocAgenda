@@ -8,49 +8,7 @@
 					</li>
 				</ol>
       </nav>
-      
-
-      <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/navbar.css" />
-      <ul class="nav navbar-nav navbar-right">
-                                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Account
-                                        <b class="caret"></b></a>
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <div class="navbar-content">
-                                                    <div class="row">
-                                                        <div class="col-md-5">
-                                                            <img src="http://placehold.it/120x120"
-                                                                alt="Alternate Text" class="img-responsive" />
-                                                            <p class="text-center small">
-                                                                <a href="#">Change Photo</a></p>
-                                                        </div>
-                                                        <div class="col-md-7">
-                                                            <span>Bhaumik Patel</span>
-                                                            <p class="text-muted small">
-                                                                mail@gmail.com</p>
-                                                            <div class="divider">
-                                                            </div>
-                                                            <a href="#" class="btn btn-primary btn-sm active">View Profile</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="navbar-footer">
-                                                    <div class="navbar-footer-content">
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-                                                                <a href="#" class="btn btn-default btn-sm">Change Passowrd</a>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <a href="http://www.jquery2dotnet.com" class="btn btn-default btn-sm pull-right">Sign Out</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-
+ 
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -61,7 +19,6 @@
 <div class="container animated fadeIn">
 
   <div class="row">
-    <h1 class="header-title"> Contact </h1>
     <hr>
     <div class="col-sm-12" id="parent">
     	<div class="col-sm-6">
@@ -72,7 +29,7 @@
     		<form action="form.php" class="contact-form" method="post">
 	
 		        <div class="form-group">
-		          <input type="text" class="form-control" id="name" name="nm" placeholder="Name" required="" autofocus="">
+		          <input type="text" class="form-control" id="name" name="nm" placeholder="Nom" required="" autofocus="">
 		        </div>
 		    
 		    
@@ -81,12 +38,12 @@
 		        </div>
 		    
 		      <div class="form-group">
-		           <input type="text" class="form-control" id="phone" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10" placeholder="Mobile No." required="">
+		           <input type="text" class="form-control" id="phone" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10" placeholder="01 02 03 04 05" required="">
 		      </div>
 		      <div class="form-group">
-		      <textarea class="form-control textarea-contact" rows="5" id="comment" name="FB" placeholder="Type Your Message/Feedback here..." required=""></textarea>
+		      <textarea class="form-control textarea-contact" rows="5" id="comment" name="FB" placeholder="Votre message..." required=""></textarea>
 		      <br>
-	      	  <button class="btn btn-default btn-send"> <span class="glyphicon glyphicon-send"></span> Send </button>
+	      	  <button class="btn btn-default btn-send"> <span class="glyphicon glyphicon-send"></span> Envoyer </button>
 		      </div>
      		</form>
     	</div>
@@ -101,12 +58,12 @@
 				<div class="icon">
 					<div class="image"><i class="fa fa-envelope" aria-hidden="true"></i></div>
 					<div class="info">
-						<h3 class="title">MAIL & WEBSITE</h3>
+						<h3 class="title">Mail et site internet</h3>
 						<p>
-							<i class="fa fa-envelope" aria-hidden="true"></i> &nbsp gondhiyahardik6610@gmail.com
+							<i class="fa fa-envelope" aria-hidden="true"></i> contact@toctocagenda.fr
 							<br>
 							<br>
-							<i class="fa fa-globe" aria-hidden="true"></i> &nbsp www.hardikgondhiya.com
+							<i class="fa fa-globe" aria-hidden="true"></i> toctocagenda.fr
 						</p>
 					
 					</div>
@@ -120,12 +77,12 @@
 				<div class="icon">
 					<div class="image"><i class="fa fa-mobile" aria-hidden="true"></i></div>
 					<div class="info">
-						<h3 class="title">CONTACT</h3>
+						<h3 class="title">Contact</h3>
     					<p>
-							<i class="fa fa-mobile" aria-hidden="true"></i> &nbsp (+91)-9624XXXXX
+							<i class="fa fa-mobile" aria-hidden="true"></i> 0102030405
 							<br>
 							<br>
-							<i class="fa fa-mobile" aria-hidden="true"></i> &nbsp  (+91)-7567065254 
+							<i class="fa fa-mobile" aria-hidden="true"></i> 0102030405
 						</p>
 					</div>
 				</div>
@@ -138,10 +95,9 @@
 				<div class="icon">
 					<div class="image"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
 					<div class="info">
-						<h3 class="title">ADDRESS</h3>
+						<h3 class="title">Adresse</h3>
     					<p>
-							 <i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp 15/3 Junction Plot 
-							 "Shree Krishna Krupa", Rajkot - 360001.
+							 <i class="fa fa-map-marker" aria-hidden="true"></i> 20 Boulevard Général de Gaulle, 44200 Nantes
 						</p>
 					</div>
 				</div>

@@ -4,21 +4,18 @@
 						<a href="#">Home</a>
 					</li>
 					<li class="breadcrumb-item active">
-						About
+						A propos
 					</li>
 				</ol>
 </nav>
-
-
 <div class="container">
     <div class="row">
         <div class="col-md-12">
 	<link rel="stylesheet" href="<?php echo base_url() ?>assets/css/about.css" />
-
 <!-- Team -->
 <section id="team" class="pb-5">
     <div class="container">
-        <h5 class="section-title h1">OUR TEAM</h5>
+        <h5 class="section-title h1">L'équipe</h5>
         <div class="row">
             <!-- Team member -->
             <div class="col-xs-12 col-sm-6 col-md-4">
@@ -27,9 +24,9 @@
                         <div class="frontside">
                             <div class="card">
                                 <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" alt="card image"></p>
-                                    <h4 class="card-title">Sunlimetech</h4>
-                                    <p class="card-text">This is basic card with image on top, title, description and button.</p>
+                                    <p><img class=" img-fluid" src="<?php echo base_url() ?>assets/img/profil/brice.jpg" alt="card image"></p>
+                                    <h4 class="card-title">Brice</h4>
+                                    <p class="card-text">Chef de Projet</p>
                                     <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
                                 </div>
                             </div>
@@ -37,8 +34,8 @@
                         <div class="backside">
                             <div class="card">
                                 <div class="card-body text-center mt-4">
-                                    <h4 class="card-title">Sunlimetech</h4>
-                                    <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
+                                    <h4 class="card-title">Brice</h4>
+                                    <p class="card-text">Etudiant du campus Ynov de Nantes</p>
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
                                             <a class="social-icon text-xs-center" target="_blank" href="#">
@@ -75,9 +72,9 @@
                         <div class="frontside">
                             <div class="card">
                                 <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_02.png" alt="card image"></p>
-                                    <h4 class="card-title">Sunlimetech</h4>
-                                    <p class="card-text">This is basic card with image on top, title, description and button.</p>
+                                    <p><img class=" img-fluid" src="<?php echo base_url() ?>assets/img/profil/houssam.jpg" alt="card image"></p>
+                                    <h4 class="card-title">Houssam</h4>
+                                    <p class="card-text">Développeur</p>
                                     <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
                                 </div>
                             </div>
@@ -85,8 +82,8 @@
                         <div class="backside">
                             <div class="card">
                                 <div class="card-body text-center mt-4">
-                                    <h4 class="card-title">Sunlimetech</h4>
-                                    <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
+                                    <h4 class="card-title">Houssam</h4>
+                                    <p class="card-text">Etudiant du campus Ynov de Nantes</p>
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
                                             <a class="social-icon text-xs-center" target="_blank" href="#">
@@ -123,9 +120,9 @@
                         <div class="frontside">
                             <div class="card">
                                 <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_03.png" alt="card image"></p>
-                                    <h4 class="card-title">Sunlimetech</h4>
-                                    <p class="card-text">This is basic card with image on top, title, description and button.</p>
+                                    <p><img class=" img-fluid" src="<?php echo base_url() ?>assets/img/profil/islam.jpg" alt="card image"></p>
+                                    <h4 class="card-title">Islam</h4>
+                                    <p class="card-text">Manager de projet</p>
                                     <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
                                 </div>
                             </div>
@@ -133,8 +130,8 @@
                         <div class="backside">
                             <div class="card">
                                 <div class="card-body text-center mt-4">
-                                    <h4 class="card-title">Sunlimetech</h4>
-                                    <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
+                                    <h4 class="card-title">Islam</h4>
+                                    <p class="card-text">Etudiante du campus Ynov de Nantes</p>
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
                                             <a class="social-icon text-xs-center" target="_blank" href="#">
@@ -171,9 +168,9 @@
                         <div class="frontside">
                             <div class="card">
                                 <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_04.jpg" alt="card image"></p>
-                                    <h4 class="card-title">Sunlimetech</h4>
-                                    <p class="card-text">This is basic card with image on top, title, description and button.</p>
+                                    <p><img class=" img-fluid" src="<?php echo base_url() ?>assets/img/profil/autre.jpg" alt="card image"></p>
+                                    <h4 class="card-title">Rémi</h4>
+                                    <p class="card-text">Administrateur système</p>
                                     <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
                                 </div>
                             </div>
@@ -181,8 +178,8 @@
                         <div class="backside">
                             <div class="card">
                                 <div class="card-body text-center mt-4">
-                                    <h4 class="card-title">Sunlimetech</h4>
-                                    <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
+                                    <h4 class="card-title">Rémi</h4>
+                                    <p class="card-text">Etudiant du campus Ynov de Nantes</p>
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
                                             <a class="social-icon text-xs-center" target="_blank" href="#">
@@ -219,9 +216,9 @@
                         <div class="frontside">
                             <div class="card">
                                 <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_05.png" alt="card image"></p>
-                                    <h4 class="card-title">Sunlimetech</h4>
-                                    <p class="card-text">This is basic card with image on top, title, description and button.</p>
+                                    <p><img class=" img-fluid" src="<?php echo base_url() ?>assets/img/profil/autre.jpg" alt="card image"></p>
+                                    <h4 class="card-title">Souheil</h4>
+                                    <p class="card-text">Marketeur</p>
                                     <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
                                 </div>
                             </div>
@@ -229,8 +226,8 @@
                         <div class="backside">
                             <div class="card">
                                 <div class="card-body text-center mt-4">
-                                    <h4 class="card-title">Sunlimetech</h4>
-                                    <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
+                                    <h4 class="card-title">Souheil</h4>
+                                    <p class="card-text">Etudiant du campus Ynov de Nantes</p>
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
                                             <a class="social-icon text-xs-center" target="_blank" href="#">
@@ -267,9 +264,9 @@
                         <div class="frontside">
                             <div class="card">
                                 <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_06.jpg" alt="card image"></p>
-                                    <h4 class="card-title">Sunlimetech</h4>
-                                    <p class="card-text">This is basic card with image on top, title, description and button.</p>
+                                    <p><img class=" img-fluid" src="<?php echo base_url() ?>assets/img/profil/teo.jpg" alt="card image"></p>
+                                    <h4 class="card-title">Téofilo</h4>
+                                    <p class="card-text">Développeur</p>
                                     <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
                                 </div>
                             </div>
@@ -277,8 +274,8 @@
                         <div class="backside">
                             <div class="card">
                                 <div class="card-body text-center mt-4">
-                                    <h4 class="card-title">Sunlimetech</h4>
-                                    <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
+                                    <h4 class="card-title">Téofilo</h4>
+                                    <p class="card-text">Etudiant du campus Ynov de Nantes</p>
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
                                             <a class="social-icon text-xs-center" target="_blank" href="#">
