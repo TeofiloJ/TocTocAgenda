@@ -17,99 +17,121 @@
 				</ol>
 </nav>
 
-<div class="container">
-	<div class="row">
-       <div class="col-md-5 ">
-
-<div class="panel panel-default">
-  <div class="panel-heading">  <h4 >Détail du profil</h4></div>
-   <div class="panel-body">
-       
-    <div class="box box-info">
-        
-            <div class="box-body">
-                     <div class="col-sm-6">
-                     <div  align="center"> <img alt="User Pic" src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" id="profile-image1" class="img-circle img-responsive"> 
-                
- <!--               <input id="profile-image-upload" class="hidden" type="file">
-<div style="color:#999;" >click here to change profile image</div>
-                Upload Image Js And Css-->
-           
-              
-   
-                
-                
-                     
-                     
-                     </div>
-              
-              <br>
-    
-              <!-- /input-group -->
+<div class="page-head"> 
+    <div class="container">
+        <div class="row">
+            <div class="page-head-content">
+                <h1 class="page-title">Bonjour : <span class="orange strong"><?php echo $_SESSION['prenom'] ?> <?php echo $_SESSION['nom'] ?></span></h1>               
             </div>
-            <div class="col-sm-6">
-            <h4 style="color:#00b1b1;"><?php echo $_SESSION['prenom'] ?> <?php echo $_SESSION['nom'] ?> </h4></span>
-              <span><p>Administrateur</p></span>            
-            </div>
-            <div class="clearfix"></div>
-            <hr style="margin:5px 0 5px 0;">
-    
-              
-<div class="col-sm-5 col-xs-6 tital " >Prénom :</div><div class="col-sm-7 col-xs-6 "><?php echo $_SESSION['prenom'] ?></div>
-     <div class="clearfix"></div>
-<div class="bot-border"></div>
+        </div>
+    </div>
+</div>
+<!-- End page header --> 
 
-<div class="col-sm-5 col-xs-6 tital " >Nom :</div><div class="col-sm-7"><?php echo $_SESSION['nom'] ?></div>
-  <div class="clearfix"></div>
-<div class="bot-border"></div>
+<!-- property area -->
+<div class="content-area user-profiel" style="background-color: #FCFCFC;">&nbsp;
+    <div class="container">   
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 profiel-container">
 
-<div class="col-sm-5 col-xs-6 tital " >Inscription :</div><div class="col-sm-7">28 mai 2018</div>
+                <form action="" method="">
+                    <div class="profiel-header">
+                        <h3>
+                            <b>MODIFIER</b> VOTRE PROFIL <br>
+                        </h3>
+                        <hr>
+                    </div>
 
-  <div class="clearfix"></div>
-<div class="bot-border"></div>
+                    <div class="clear">
+                        <div class="col-sm-3 col-sm-offset-1">
+                            <div class="picture-container">
+                                <div class="picture">
+                                    <img src="assets/img/avatar.png" class="picture-src" id="wizardPicturePreview" title=""/>
+                                    <input type="file" id="wizard-picture">
+                                </div>
+                                <h6>Choisissez une photo</h6>
+                            </div>
+                        </div>
 
-<div class="col-sm-5 col-xs-6 tital " >Téléphone :</div><div class="col-sm-7"><?php echo $_SESSION['telephone'] ?></div>
+                        <div class="col-sm-3 padding-top-25">
 
- <div class="clearfix"></div>
-<div class="bot-border"></div>
+                            <div class="form-group">
+                                <label>Prénom <small>(requis)</small></label>
+                                <input name="prenom" type="text" class="form-control" value="<?php echo $_SESSION['prenom'] ?>" placeholder="Andrew...">
+                            </div>
+                            <div class="form-group">
+                                <label>Last Name <small>(requis)</small></label>
+                                <input name="nom" type="text" class="form-control" value="<?php echo $_SESSION['nom'] ?>" placeholder="Smith...">
+                            </div> 
+                            <div class="form-group">
+                                <label>Email <small>(requis)</small></label>
+                                <input name="mail" type="email" class="form-control" value="<?php echo $_SESSION['mail'] ?>" placeholder="andrew@email@email.com.com">
+                            </div> 
+                        </div>
+                    </div>
 
-<div class="col-sm-5 col-xs-6 tital " >Mail :</div><div class="col-sm-7"><?php echo $_SESSION['mail'] ?></div>
+                    <div class="clear">
+                        <br>
+                        <hr>
+                        <br>
+                        <div class="col-sm-5 col-sm-offset-1">
+                            <div class="form-group">
+                                <label>Facebook :</label>
+                                <input name="Facebook" type="text" class="form-control" placeholder="https://facebook.com/user">
+                            </div>
+                            <div class="form-group">
+                                <label>Twitter :</label>
+                                <input name="Twitter" type="text" class="form-control" placeholder="https://Twitter.com/@user">
+                            </div>
+                            <div class="form-group">
+                                <label>Website :</label>
+                                <input name="website" type="text" class="form-control" placeholder="https://yoursite.com/">
+                            </div>
+                        </div>  
 
- <div class="clearfix"></div>
-<div class="bot-border"></div>
+                        <div class="col-sm-5">
+                            <div class="form-group">
+                                <label>Public email :</label>
+                                <input name="p-email" type="email" class="form-control" placeholder="p-email@rmail.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone :</label>
+                                <input name="Phone" type="text" class="form-control" placeholder="+1 9090909090">
+                            </div>
+                        </div>
 
-<div class="col-sm-5 col-xs-6 tital " >Statut :</div><div class="col-sm-7"><?php echo $_SESSION['statut'] ?></div>
-
-
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
+                    </div>
+            
+                    <div class="col-sm-5 col-sm-offset-1">
+                        <br>
+                        <input type='button' class='btn btn-finish btn-primary' name='validate' value='Valider' />
+                    </div>
+                    <br>
+            </form>
 
         </div>
-       
-            
-    </div> 
-    </div>
-</div>  
-    <script>
-              $(function() {
-    $('#profile-image1').on('click', function() {
-        $('#profile-image-upload').click();
-    });
-});       
-              </script> 
-       
-       
-       
-       
-       
-       
-       
-       
-       
-   </div>
+    </div><!-- end row -->
+
+</div>
 </div>
 
 
 
 
+<script src="assets/js/vendor/modernizr-2.6.2.min.js"></script>
+<script src="assets/js//jquery-1.10.2.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/bootstrap-select.min.js"></script>
+<script src="assets/js/bootstrap-hover-dropdown.js"></script>
+<script src="assets/js/easypiechart.min.js"></script>
+<script src="assets/js/jquery.easypiechart.min.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/wow.js"></script>
+<script src="assets/js/icheck.min.js"></script>
+
+<script src="assets/js/price-range.js"></script> 
+<script src="assets/js/jquery.bootstrap.wizard.js" type="text/javascript"></script>
+<script src="assets/js/jquery.validate.min.js"></script>
+<script src="assets/js/wizard.js"></script>
+
+<script src="assets/js/main.js"></script>

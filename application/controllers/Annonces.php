@@ -40,7 +40,7 @@ class Annonces extends CI_Controller {
         $annonce = $this->db->get()->result();
         $data = array ('annonce' => $annonce);
 
-		$this->load->view('annonces/annonce_display', $data);
+		$this->load->view('annonces/details-annonce', $data);
     }
     
     public function create()

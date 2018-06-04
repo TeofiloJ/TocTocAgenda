@@ -8,114 +8,121 @@
 					</li>
 				</ol>
       </nav>
- 
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-	<link rel="stylesheet" href="<?php echo base_url() ?>assets/css/contact.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
-    
-<div class="container animated fadeIn">
-
-  <div class="row">
-    <hr>
-    <div class="col-sm-12" id="parent">
-    	<div class="col-sm-6">
-    	<iframe width="100%" height="320px;" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12893.309291059408!2d-1.5414511655168135!3d47.2071036578621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805eea8a2d862ad%3A0xac11d6061c877032!2sYnov+Nantes!5e0!3m2!1sfr!2sfr!4v1528123184472"></iframe>
-    	</div>
-
-    	<div class="col-sm-6">
-    		<form action="form.php" class="contact-form" method="post">
-	
-		        <div class="form-group">
-		          <input type="text" class="form-control" id="name" name="nm" placeholder="Nom" required="" autofocus="">
-		        </div>
-		    
-		    
-		        <div class="form-group form_left">
-		          <input type="email" class="form-control" id="email" name="em" placeholder="Email" required="">
-		        </div>
-		    
-		      <div class="form-group">
-		           <input type="text" class="form-control" id="phone" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10" placeholder="01 02 03 04 05" required="">
-		      </div>
-		      <div class="form-group">
-		      <textarea class="form-control textarea-contact" rows="5" id="comment" name="FB" placeholder="Votre message..." required=""></textarea>
-		      <br>
-	      	  <button class="btn btn-default btn-send"> <span class="glyphicon glyphicon-send"></span> Envoyer </button>
-		      </div>
-     		</form>
-    	</div>
-    </div>
-  </div>
-
-  <div class="container second-portion">
-	<div class="row">
-        <!-- Boxes de Acoes -->
-    	<div class="col-xs-12 col-sm-6 col-lg-4">
-			<div class="box">							
-				<div class="icon">
-					<div class="image"><i class="fa fa-envelope" aria-hidden="true"></i></div>
-					<div class="info">
-						<h3 class="title">Mail et site internet</h3>
-						<p>
-							<i class="fa fa-envelope" aria-hidden="true"></i> contact@toctocagenda.fr
-							<br>
-							<br>
-							<i class="fa fa-globe" aria-hidden="true"></i> toctocagenda.fr
-						</p>
-					
-					</div>
-				</div>
-				<div class="space"></div>
-			</div> 
+   <div class="page-head"> 
+	<div class="container">
+		<div class="row">
+			<div class="page-head-content">
+				<h1 class="page-title">Nous contacter</h1>               
+			</div>
 		</div>
-			
-        <div class="col-xs-12 col-sm-6 col-lg-4">
-			<div class="box">							
-				<div class="icon">
-					<div class="image"><i class="fa fa-mobile" aria-hidden="true"></i></div>
-					<div class="info">
-						<h3 class="title">Contact</h3>
-    					<p>
-							<i class="fa fa-mobile" aria-hidden="true"></i> 0102030405
-							<br>
-							<br>
-							<i class="fa fa-mobile" aria-hidden="true"></i> 0102030405
-						</p>
-					</div>
-				</div>
-				<div class="space"></div>
-			</div> 
-		</div>
-			
-        <div class="col-xs-12 col-sm-6 col-lg-4">
-			<div class="box">							
-				<div class="icon">
-					<div class="image"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
-					<div class="info">
-						<h3 class="title">Adresse</h3>
-    					<p>
-							 <i class="fa fa-map-marker" aria-hidden="true"></i> 20 Boulevard Général de Gaulle, 44200 Nantes
-						</p>
-					</div>
-				</div>
-				<div class="space"></div>
-			</div> 
-		</div>		    
-		<!-- /Boxes de Acoes -->
-		
-		<!--My Portfolio  dont Copy this -->
-	    
 	</div>
 </div>
+<!-- End page header -->
 
+<!-- property area -->
+<div class="content-area recent-property padding-top-40" style="background-color: #FFF;">
+	<div class="container">  
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2"> 
+				<div class="" id="contact1">                        
+					<div class="row">
+						<div class="col-sm-4">
+							<h3><i class="fa fa-map-marker"></i> Address</h3>
+							<p>20 Boulevard Général de Gaulle
+								<br>Nantes 
+								<br>
+								<strong>France</strong>
+							</p>
+						</div>
+						<!-- /.col-sm-4 -->
+						<div class="col-sm-4">
+							<h3><i class="fa fa-phone"></i> Call center</h3>
+							<p><strong>+33 01 02 03 04 05</strong></p>
+						</div>
+						<!-- /.col-sm-4 -->
+						<div class="col-sm-4">
+							<h3><i class="fa fa-envelope"></i> Mail</h3>
+							<ul>
+								<li><strong><a href="mailto:">contact@toctocagenda.fr</a></strong>   </li>
+							</ul>
+						</div>
+						<!-- /.col-sm-4 -->
+					</div>
+					<!-- /.row -->
+					<hr>
+					
+					<hr>
+					<h2>Formulaire de contact</h2>
+					<form>
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label for="firstname">Prénom</label>
+									<input type="text" class="form-control" id="firstname">
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label for="lastname">Nom</label>
+									<input type="text" class="form-control" id="lastname">
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label for="email">Email</label>
+									<input type="text" class="form-control" id="email">
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label for="subject">Sujet</label>
+									<input type="text" class="form-control" id="subject">
+								</div>
+							</div>
+							<div class="col-sm-12">
+								<div class="form-group">
+									<label for="message">Message</label>
+									<textarea id="message" class="form-control"></textarea>
+								</div>
+							</div>
+							<div class="col-sm-12 text-center">
+								<button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Envoyer</button>
+							</div>
+						</div>
+						<!-- /.row -->
+					</form>
+				</div>
+			</div>    
+		</div>
+	   
+	</div>
 </div>
+<div id="map" style="height: 400px;"></div>
+<!-- Footer area-->
 
 
+<script src="assets/js/modernizr-2.6.2.min.js"></script>
 
+<script src="assets/js/jquery-1.10.2.min.js"></script> 
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/bootstrap-select.min.js"></script>
+<script src="assets/js/bootstrap-hover-dropdown.js"></script>
 
+<script src="assets/js/easypiechart.min.js"></script>
+<script src="assets/js/jquery.easypiechart.min.js"></script>
 
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/wow.js"></script>
 
-</div></div></div>
+<script src="assets/js/icheck.min.js"></script>
+<script src="assets/js/price-range.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+<script src="assets/js/gmaps.js"></script>        
+<script src="assets/js/gmaps.init.js"></script>
+
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
