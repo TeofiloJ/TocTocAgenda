@@ -1,7 +1,3 @@
-
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
-      <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>          
-      <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />  
 <nav>
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item">
@@ -43,33 +39,48 @@
 
                        <div class="section"> 
                             <div id="list-type" class="proerty-th-list">
-                                <div class="col-md-4 p0">
-                                    <div class="box-two proerty-item">
-                                        <div class="item-thumb">
-                                            <a href="property-1.html" ><img src="<?php echo base_url()?>assets/img/demo/property-3.jpg"></a>
-                                        </div>
-                                        <div class="item-entry overflow">
-                                            <h5><a href="property-1.html"> Super nice villa </a></h5>
-                                            <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Area :</b> 120m </span>
-                                            <span class="proerty-price pull-right"> $ 300,000</span>
-                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
-                                            <div class="property-icon">
-                                                <img src="<?php echo base_url()?>assets/img/icon/bed.png">(5)|
-                                                <img src="<?php echo base_url()?>assets/img/icon/shawer.png">(2)|
-                                                <img src="<?php echo base_url()?>assets/img/icon/cars.png">(1)  
+                            <?php
+      $output ='';
+      if($annonces->num_rows() > 0)
+        {
+            foreach($annonces->result() as $row)
+            {
+                $output .= '
+                <div class="col-sm-6 col-md-4 p0">
+                <div class="box-two proerty-item">
+                    <div class="item-thumb">
+                        <a href='.base_url().'annonces/display/'.$row->idAnnonce.' ><img src="'. base_url().'assets/img/demo/property-3.jpg"></a>
+                    </div>
+                    <div class="item-entry overflow">
+                        <h5><a href="property-1.html"> '.$row->nom.' </a></h5>
+                        <div class="dot-hr"></div>
+                        <span class="pull-left"><b> Surface :</b> '.$row->surface.' </span>
+                        <span class="proerty-price pull-right"> '.$row->prix.'€</span>
+                        <p style="display: none;">'.$row->description.'</p>
+                        <div class="property-icon">
+                            <img src="'.base_url().'assets/img/icon/bed.png">|
+                            <img src="'.base_url().'assets/img/icon/shawer.png">|
+                            <img src="'.base_url().'assets/img/icon/cars.png">  
+            
+                            <div class="dealer-action pull-right">                                        
+                                <a href="'.base_url().'" class="button">Editer </a>
+                                <a href="'.base_url().'" class="button delete_user_car">Supprimer</a>
+                                <a href="'.base_url().'annonces/display/'.$row->idAnnonce.'" class="button">Voir</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                ';
+                
+            }
+            echo $output;
+          }else{
+             echo "no result";
+          }
 
-                                                <div class="dealer-action pull-right">                                        
-                                                    <a href="submit-property.html" class="button">Edit </a>
-                                                    <a href="#" class="button delete_user_car">Delete</a>
-                                                    <a href="property-1.html" class="button">View</a>
-                                                </div>
-                                            </div>
-
-
-                                        </div>
-                                    </div>
-                                </div>                
+          
+?>
                             </div>
                         </div>
    

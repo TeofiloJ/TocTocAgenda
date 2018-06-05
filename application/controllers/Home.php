@@ -16,6 +16,12 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
+		$result = $this->db->query("select * from annonce limit 6");
+
+
+		$data = array(
+			'annonces' => $result
+		);
 
         $this->load->view('header');
         if(isset($_SESSION['user_logged'])){
@@ -24,7 +30,20 @@ class Home extends CI_Controller {
             $this->load->view('menus/menu');
        	}
 		
-		$this->load->view('pages/home');
+		$this->load->view('pages/home',$data);
+	}
+
+	public function home2()
+	{
+
+        $this->load->view('header');
+        if(isset($_SESSION['user_logged'])){
+            $this->load->view('menus/logged_menu');
+       	}else{
+            $this->load->view('menus/menu');
+       	}
+		
+		$this->load->view('pages/home2');
 	}
 
 	public function contact()

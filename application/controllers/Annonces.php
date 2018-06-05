@@ -74,10 +74,23 @@ class Annonces extends CI_Controller {
             redirect("auth/login");
         }
 
+        $this->db->select("*");
+        $this->db->from("annonce");
+        $this->db->like("idUser",$_SESSION['idUser']);
+        $this->db->order_by('dateEnregistrement', 'DESC');
+        $annonces = $this->db->get();
+        $data = array(
+            'annonces' => $annonces
+        );
+       
+
         $this->load->view('header');
-        $this->load->view('menus/logged_menu');
-		
-		$this->load->view('annonces/annonce_list');
+        if(isset($_SESSION['user_logged'])){
+            $this->load->view('menus/logged_menu');
+        }else{
+            $this->load->view('menus/menu');
+        }		
+        $this->load->view('annonces/annonce_list',$data);
     }
     
     public function search()
@@ -136,7 +149,10 @@ class Annonces extends CI_Controller {
                 }
                 $query .=' chauffage =  "'.$_POST['chauffage'].'"';
             }
-            echo $query;
+
+            if($query == 'select * from Annonce where '){
+                $query ="select * from Annonce";
+            }
             
             $result  = $this->db->query($query);
             $data = array(

@@ -114,7 +114,7 @@
                         <div class="blog-asside-right pl0">
                             <div class="panel panel-default sidebar-menu wow fadeInRight animated" >
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">Smart search</h3>
+                                    <h3 class="panel-title">Filtres</h3>
                                 </div>
                                 <div class="panel-body search-widget">
                                     <form action="" method="POST" class=" form-inline"> 
