@@ -21,7 +21,7 @@
                             <a href="index.html" class="dropdown-toggle active" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Gestion <b class="caret"></b></a>
                             <ul class="dropdown-menu navbar-nav">
                                 <li>
-                                    <a href="<?php echo base_url()?>annonces/adsList">Mes annonces</a>
+                                    <a href="<?php echo base_url()?>annonces/list">Mes annonces</a>
                                 </li>
                                 <li>
                                     <a href="<?php echo base_url()?>annonces/create">Mes rendez vous</a>

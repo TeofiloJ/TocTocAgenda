@@ -17,6 +17,7 @@
 <script src="<?php echo base_url() ?>assets/calendar/fullcalendar.min.js"></script>
 <script src="<?php echo base_url() ?>assets/calendar/gcal.js"></script>
 
+
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -24,6 +25,7 @@
             <div id="calendar">
 
             </div>
+            
 
             <script type="text/javascript">
                     $(document).ready(function() {
