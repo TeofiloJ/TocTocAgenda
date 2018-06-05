@@ -85,36 +85,89 @@ class Annonces extends CI_Controller {
         $output = '';
         $query = '';
 
-        if($this->input->post('query'))
+        if($this->input->post('validate'))
         {
-            $query = $this->input->post('query');
-        }
+            $query = 'select * from Annonce where ';
+            if(isset($_POST['typeAnnonce'])&& $_POST['typeAnnonce'] !=""){
+                if($query != 'select * from Annonce where '){
+                    $query .=" and ";
+                }
+                $query .=' typeAnnonce =  "'.$_POST['typeAnnonce'].'"';
+            }
+            if(isset($_POST['typeDeBien'])&& $_POST['typeDeBien'] !=""){
+                if($query != 'select * from Annonce where '){
+                    $query .=" and ";
+                }
+                $query .=' typeDeBien =  "'.$_POST['typeDeBien'].'"';
+            }
+            if(isset($_POST['prix'])&& $_POST['prix'] !=""){
+                if($query != 'select * from Annonce where '){
+                    $query .=" and ";
+                }
+                $query .=' prix =  "'.$_POST['prix'].'"';
+            }
+            if(isset($_POST['charges'])&& $_POST['charges'] !=""){
+                if($query != 'select * from Annonce where '){
+                    $query .=" and ";
+                }
+                $query .=' charges =  "'.$_POST['charges'].'"';
+            }
+            if(isset($_POST['surface'])&& $_POST['surface'] !=""){
+                if($query != 'select * from Annonce where '){
+                    $query .=" and ";
+                }
+                $query .=' surface =  "'.$_POST['surface'].'"';
+            }
+            if(isset($_POST['exposition'])&& $_POST['exposition'] !=""){
+                if($query != 'select * from Annonce where '){
+                    $query .=" and ";
+                }
+                $query .=' exposition =  "'.$_POST['exposition'].'"';
+            }
+            if(isset($_POST['etage'])&& $_POST['etage'] !=""){
+                if($query != 'select * from Annonce where '){
+                    $query .=" and ";
+                }
+                $query .=' etage =  "'.$_POST['etage'].'"';
+            }
+            if(isset($_POST['chauffage']) && $_POST['chauffage'] !=""){
+                if($query != 'select * from Annonce where '){
+                    $query .=" and ";
+                }
+                $query .=' chauffage =  "'.$_POST['chauffage'].'"';
+            }
+            echo $query;
+            
+            $result  = $this->db->query($query);
+            $data = array(
+                'annonces' => $result
+            );
 
-        $this->db->select("*");
-        $this->db->from("annonce");
-            //$this->db->like("idUser",$_SESSION['idUser']);
-        if($query != '')
-        {
-            $this->db->like('typeAnnonce', $query);
-            $this->db->or_like('idAnnonce', $query);
-            $this->db->or_like('typeDeBien', $query);
-            $this->db->or_like('nom', $query);
-            $this->db->or_like('prix', $query);
-            $this->db->or_like('charges', $query);
-            $this->db->or_like('description', $query);
-            $this->db->or_like('surface', $query);
-            $this->db->or_like('exposition', $query);
-            $this->db->or_like('etage', $query);
-            $this->db->or_like('chauffage', $query);
-        }
-        $this->db->order_by('dateEnregistrement', 'DESC');
-        $annonces = $this->db->get();
-        $data = array(
-            'annonces' => $annonces
-        );
-        
-        
+        }else{
 
+            $this->db->select("*");
+            $this->db->from("annonce");
+                //$this->db->like("idUser",$_SESSION['idUser']);
+            if($query != '')
+            {
+                $this->db->like('typeAnnonce', $query);
+                $this->db->or_like('idAnnonce', $query);
+                $this->db->or_like('typeDeBien', $query);
+                $this->db->or_like('nom', $query);
+                $this->db->or_like('prix', $query);
+                $this->db->or_like('charges', $query);
+                $this->db->or_like('description', $query);
+                $this->db->or_like('surface', $query);
+                $this->db->or_like('exposition', $query);
+                $this->db->or_like('etage', $query);
+                $this->db->or_like('chauffage', $query);
+            }
+            $this->db->order_by('dateEnregistrement', 'DESC');
+            $annonces = $this->db->get();
+            $data = array(
+                'annonces' => $annonces
+            );
+        }     
 
         $this->load->view('header');
         if(isset($_SESSION['user_logged'])){

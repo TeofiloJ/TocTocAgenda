@@ -122,6 +122,7 @@
 <div class="form-group">
   <label for="typeAnnonce">Type d'annonce</label>
     <select id="typeAnnonce" name="typeAnnonce" class="form-control">
+    <option value=""></option>
       <option value="Location">Location</option>
       <option value="Vente">Vente</option>
     </select>
@@ -131,7 +132,7 @@
 <div class="form-group">
   <label cfor="typeDeBien">Type de bien</label>
     <select id="typeDeBien" name="typeDeBien" class="form-control">
-        <option value="Maison"></option>
+        <option value=""></option>
       <option value="Maison">Maison</option>
       <option value="Appartement">Appartement</option>
       <option value="Terrain">Terrain</option>
@@ -173,7 +174,7 @@
 <div class="form-group">
   <label  for="exposition">Exposition</label>
     <select id="exposition" name="exposition" class="form-control">
-    <option value="Nord"></option>
+    <option value=""></option>
       <option value="Nord">Nord</option>
       <option value="Sud">Sud</option>
       <option value="Ouest">Ouest</option>
@@ -192,7 +193,7 @@
 <div class="form-group">
   <label  for="chauffage">Chauffage</label>
     <select id="chauffage" name="chauffage" class="form-control">
-    <option value="Electrique"></option>
+    <option value=""></option>
       <option value="Electrique">Electrique</option>
       <option value="Gaz">Gaz</option>
       <option value="Autre">Autre</option>
@@ -202,7 +203,7 @@
                                         <fieldset >
                                             <div class="row">
                                                 <div class="col-xs-12">  
-                                                    <input class="button btn largesearch-btn" value="Rechercher" type="submit">
+                                                    <input class="button btn largesearch-btn" id="validate" name="validate" value="Rechercher" type="submit">
                                                 </div>  
                                             </div>
                                         </fieldset>                                     
