@@ -33,13 +33,13 @@
         <div class="row h-100">
           <div class="col-12 my-auto">
             <div class="masthead-content text-white py-5 py-md-0">
-              <h1 class="mb-3">Coming Soon!</h1>
-              <p class="mb-5">We're working hard to finish the development of this site. Our target launch date is
-                <strong>January 2019</strong>! Sign up for updates using the form below!</p>
+              <h1 class="mb-3">Coming Soon !</h1>
+              <p class="mb-5">Nous travaillons dur pour terminer le développement du site. Notre date de lancement estimée pour la V1 est
+                <strong>Janvier 2019</strong> ! Inscrivez vous en utilisant le formulaire ci-dessous pour être tenu au courant de l'avancée et qui sait obtenir des avantages !</p>
               <div class="input-group input-group-newsletter">
-                <input type="email" class="form-control" placeholder="Enter email..." aria-label="Enter email..." aria-describedby="basic-addon">
+                <input type="email" class="form-control" placeholder="Entrez un Mail..." aria-label="Mail..." aria-describedby="basic-addon">
                 <div class="input-group-append">
-                  <button class="btn btn-secondary" type="button">Notify Me!</button>
+                  <button class="btn btn-secondary" type="button">Notifiez moi!</button>
                 </div>
               </div>
             </div>

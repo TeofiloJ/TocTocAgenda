@@ -213,37 +213,7 @@
                         <div class="dealer-content">
                             <div class="inner-wrapper">
 
-                                 <link rel="stylesheet" href="<?php echo base_url() ?>assets/calendar/fullcalendar.min.css" />
-					<script src="<?php echo base_url() ?>assets/calendar/lib/moment.min.js"></script>
-					<script src="<?php echo base_url() ?>assets/calendar/fullcalendar.min.js"></script>
-					<script src="<?php echo base_url() ?>assets/calendar/gcal.js"></script>
-
-					<div id="calendar">
-
-					</div>
-
-					<script type="text/javascript">
-							$(document).ready(function() {
-								$('#calendar').fullCalendar({
-									eventSources: [
-										{
-											color: '#18b9e6',   
-											textColor: '#000000',
-											events: [
-												{
-								title: 'Event 1',
-								start: '2018-06-01'
-							},
-							{
-								title: 'Event 2',
-								start: '2018-06-07'
-							}
-											]
-										}
-									]
-								});
-							});
-					</script>
+                                <div class="item"><img src="<?php echo base_url()?>assets/img/book.jpg" alt="Mirror Edge"></div> 
 
                             </div>
                         </div>
@@ -251,66 +221,53 @@
 
                     <div class="panel panel-default sidebar-menu similar-property-wdg wow fadeInRight animated">
                         <div class="panel-heading">
-                            <h3 class="panel-title">Similar Properties</h3>
+                            <h3 class="panel-title">Biens similaires</h3>
                         </div>
                         <div class="panel-body recent-property-widget">
-                                <ul>
-                                <li>
-                                    <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
-                                        <a href="single.html"><img src="<?php echo base_url()?>assets/img/demo/small-property-2.jpg"></a>
-                                        <span class="property-seeker">
-                                            <b class="b-1">A</b>
-                                            <b class="b-2">S</b>
-                                        </span>
-                                    </div>
-                                    <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
-                                        <h6> <a href="single.html">Super nice villa </a></h6>
-                                        <span class="property-price">3000000$</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="col-md-3 col-sm-3  col-xs-3 blg-thumb p0">
-                                        <a href="single.html"><img src="<?php echo base_url()?>assets/img/demo/small-property-1.jpg"></a>
-                                        <span class="property-seeker">
-                                            <b class="b-1">A</b>
-                                            <b class="b-2">S</b>
-                                        </span>
-                                    </div>
-                                    <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
-                                        <h6> <a href="single.html">Super nice villa </a></h6>
-                                        <span class="property-price">3000000$</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
-                                        <a href="single.html"><img src="<?php echo base_url()?>assets/img/demo/small-property-3.jpg"></a>
-                                        <span class="property-seeker">
-                                            <b class="b-1">A</b>
-                                            <b class="b-2">S</b>
-                                        </span>
-                                    </div>
-                                    <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
-                                        <h6> <a href="single.html">Super nice villa </a></h6>
-                                        <span class="property-price">3000000$</span>
-                                    </div>
-                                </li>
+                                    <ul>
+                                        <li>
+                                            <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
+                                                <a href="single.html"><img src="<?php echo base_url()?>assets/img/demo/small-property-2.jpg"></a>
+                                            </div>
+                                            <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
+                                                <h6> <a href="single.html">Studio centre ville </a></h6>
+                                                <span class="property-price">375€</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col-md-3 col-sm-3  col-xs-3 blg-thumb p0">
+                                                <a href="single.html"><img src="<?php echo base_url()?>assets/img/demo/small-property-1.jpg"></a>
 
-                                <li>
-                                    <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
-                                        <a href="single.html"><img src="<?php echo base_url()?>assets/img/demo/small-property-2.jpg"></a>
-                                        <span class="property-seeker">
-                                            <b class="b-1">A</b>
-                                            <b class="b-2">S</b>
-                                        </span>
-                                    </div>
-                                    <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
-                                        <h6> <a href="single.html">Super nice villa </a></h6>
-                                        <span class="property-price">3000000$</span>
-                                    </div>
-                                </li>
+                                            </div>
+                                            <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
+                                                <h6> <a href="single.html">T1 sur l'île </a></h6>
+                                                <span class="property-price">480€</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
+                                                <a href="single.html"><img src="<?php echo base_url()?>assets/img/demo/small-property-3.jpg"></a>
 
-                            </ul>
-                        </div>
+                                            </div>
+                                            <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
+                                                <h6> <a href="single.html">Loft quatier beaulieu </a></h6>
+                                                <span class="property-price">189000€</span>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
+                                                <a href="single.html"><img src="<?php echo base_url()?>assets/img/demo/small-property-2.jpg"></a>
+
+                                            </div>
+                                            <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
+                                                <h6> <a href="single.html">Studio </a></h6>
+                                                <span class="property-price">375€</span>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
                     </div>                          
                     </aside>
             </div>

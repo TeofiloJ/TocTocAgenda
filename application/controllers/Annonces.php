@@ -32,6 +32,20 @@ class Annonces extends CI_Controller {
 
 		$this->load->view('annonces/details-annonce', $data);
     }
+
+    public function delete($id){
+
+        $result  = $this->db->query("select idUser from annonce where idAnnonce =".$id);
+        echo $result;
+        if($_SESSION['idUser'] == $result){
+            $this->db->query("select idUser form annonce where idAnnonce =".$id);
+            $this->session->set_flashdata("success","Succès : Votre annonce a été supprimée.");
+            redirect("annonces/list");
+        }
+        $this->session->set_flashdata("error","Erreur : vous n'avez pas la permission d'effectuer cette action.");
+        redirect("annonces/list");
+
+    }
     
     public function create()
 	{

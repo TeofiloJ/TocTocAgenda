@@ -16,6 +16,10 @@
     <div class="alert alert-success"> <?php echo $_SESSION['success']; ?></div>
 <?php
 }?>
+<?php if (isset($_SESSION['error'])){ ?>
+    <div class="alert alert-error"> <?php echo $_SESSION['error']; ?></div>
+<?php
+}?>
 
 
 
@@ -64,8 +68,8 @@
             
                             <div class="dealer-action pull-right">                                        
                                 <a href="'.base_url().'" class="button">Editer </a>
-                                <a href="'.base_url().'" class="button delete_user_car">Supprimer</a>
-                                <a href="'.base_url().'annonces/display/'.$row->idAnnonce.'" class="button">Voir</a>
+                                <a href="'.base_url().'annonces/delete/'.$row->idAnnonce.'" class="button delete_user_car">Supprimer</a>
+                                <a href="'.base_url().'annonces/display" class="button">Voir</a>
                             </div>
                         </div>
                     </div>
